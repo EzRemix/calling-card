@@ -96,19 +96,19 @@ body {
 
 /* Esto ajustará las letras recortadas para que entren bien en el celular */
 @media (max-width: 600px) {
-  .texto-oculto {
-    width: 95% !important; /* Aprovecha casi todo el ancho de la pantalla */
-  }
+  /* ... (aquí ya tienes el código anterior, déjalo como está) ... */
 
+  /* NUEVO: Esto va a separar los párrafos para que no se encimen */
   .texto-oculto p {
-    font-size: 14px !important;       /* Reduce el tamaño de los cuadros con letras */
-    letter-spacing: -2px !important;  /* Junta un poco más los cuadros entre sí */
-    line-height: 1.8 !important;      /* Separa un poco los renglones para que no se encimen */
+    margin-bottom: 20px !important; /* Empuja el enlace hacia abajo */
   }
 
-  .texto-oculto span {
-    font-size: 16px !important;       /* Deja el nombre "SR. Daniel Noboa" ligeramente más visible */
-    display: inline-block;            /* Fuerza a que el bloque del nombre se mantenga más unido */
-    margin-bottom: 5px;
+  /* NUEVO: Esto reduce el tamaño de las letras moradas del enlace */
+  .texto-oculto a {
+    font-size: 18px !important;       /* Reduce el tamaño del enlace morado */
+    letter-spacing: -1px !important;  /* Junta un poco sus letras para que quepan */
+    line-height: 1.6 !important;      /* Separa los renglones del enlace */
+    display: inline-block !important; /* Lo organiza mejor en el bloque */
+    margin-top: 15px !important;      /* Crea una separación limpia con el texto de arriba */
   }
 }
