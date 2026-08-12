@@ -85,46 +85,6 @@ body {
   100% { opacity: 1; }   /* Se vuelve completamente visible al final */
 }
 
-@media (max-width: 600px) {
-  .contenedor-efecto {
-    position: relative !important;
-    width: 95% !important;
-    max-width: 360px !important;
-    margin: 20px auto !important;
-    padding: 10px !important;
+.texto-oculto span.letra-color {
+    color: #ff0000
   }
-
-  .texto-oculto {
-    position: relative !important;
-    top: 0 !important;
-    left: 0 !important;
-    transform: none !important; /* Quita el centrado rígido de PC */
-    width: 100% !important;
-  }
-
-  /* Hace el texto blanco más compacto para que las cajas de letras entren en la pantalla */
-  .texto-oculto p {
-    font-size: 13px !important;
-    letter-spacing: -1.5px !important;
-    line-height: 1.5 !important;
-    margin-bottom: 25px !important;
-  }
-
-  /* Ajusta el nombre principal en celulares */
-  .texto-oculto span.letra-color {
-    font-size: 15px !important;
-    letter-spacing: -1px !important;
-    margin-bottom: 8px !important;
-  }
-
-  /* Separa y acomoda el enlace morado abajo para que no se pise con nada */
-  .texto-oculto a {
-    display: block !important;
-    font-size: 12px !important;
-    letter-spacing: -1px !important;
-    line-height: 1.4 !important;
-    margin-top: 15px !important;
-    white-space: normal !important;
-    word-wrap: break-word !important;
-  }
-}
