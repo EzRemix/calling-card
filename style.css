@@ -1,6 +1,9 @@
-/* Centra el contenedor en la pantalla (opcional) */
+@import url('https://fonts.cdnfonts.com/css/earwig-factory');
+
 body {
     display: flex;
+    margin: 0;
+    padding: 0;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -38,8 +41,6 @@ body {
     animation: desvanecerParcial 3s forwards;
 }
 
-@import url('https://fonts.cdnfonts.com/css/earwig-factory');
-
 .contenedor-efecto {
   position: relative;
   width: 90;       /* El tamaño máximo que elegimos antes */
@@ -53,7 +54,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); /* Centra el texto sobre la imagen */
-  width: 90%;
+  width: 100%;
   text-align: center;
   box-sizing: border-box;
   
