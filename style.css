@@ -1,0 +1,94 @@
+/* Centra el contenedor en la pantalla (opcional) */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000000;
+}
+
+/* EFECTO DE SCANLINES */
+.lineas-crt {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        linear-gradient(
+            rgba(18, 16, 16, 0) 50%,
+            rgba(0, 0, 0, 0.25) 50%
+        ),
+        linear-gradient(
+            90deg,
+            rgba(2, 2, 2, 0.06),
+            rgba(3, 3, 3, 0.02),
+            rgba(0, 0, 0, 0.06)
+        );
+    background-size: 100% 4px, 6px 100%;
+    z-index: 999;
+    pointer-events: none;
+}
+
+.imagend{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    animation: desvanecerParcial 3s forwards;
+}
+
+@import url('https://fonts.cdnfonts.com/css/earwig-factory');
+
+/* 2. Configurar el contenedor para que ambos elementos se encimen */
+.contenedor-efecto {
+  position: relative;
+  width: 400px;       /* El tamaño máximo que elegimos antes */
+  max-width: 100%;    /* Sigue siendo totalmente adaptable al móvil */
+  height: auto;
+  margin: 0 auto;     /* Centra el contenedor en la pantalla */
+}
+
+/* 4. Estilos y animación del texto (de transparente a visible) */
+.texto-oculto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra el texto sobre la imagen */
+  width: 100%;
+  text-align: center;
+  
+  /* Aplicar tu fuente específica */
+  font-family: 'Earwig Factory', sans-serif;                                           
+  font-size: 2.5rem;
+  color: #ffffff; /* Cambia el color a tu gusto */
+  
+  /* Aplicamos la animación del texto en sintonía con la imagen */
+  animation: aparecerTexto 3s forwards;
+}
+
+/* =========================================================
+   REGLAS DE LAS ANIMACIONES (Pasos del efecto)
+   ========================================================= */
+
+@keyframes desvanecerParcial {
+  0% {
+    opacity: 1; /* Inicia 100% clara y visible */
+  }
+  60% {
+    opacity: 1; /* Mantiene el 100% de claridad durante primeros 3 segundos (60% de 5s) */
+  }
+  100% {
+    opacity: 0.6; /* En los últimos 2 segundos, 60% de opacidad */
+  }
+}
+
+@keyframes aparecerTexto {
+  0% { opacity: 0; }     /* Empieza invisible */
+  50% { opacity: 0; }    /* Sigue invisible mientras la imagen se borra */
+  100% { opacity: 1; }   /* Se vuelve completamente visible al final */
+}
+
+.letra-color {
+    color: #ff0000;
+}
