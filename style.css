@@ -93,53 +93,22 @@ body {
 .letra-color {
     color: #ff0000;
 }
-/* SOLUCIÓN DEFINITIVA PARA EL TEXTO AMONTONADO EN CELULAR */
+
+/* Esto ajustará las letras recortadas para que entren bien en el celular */
 @media (max-width: 600px) {
-  
-  .contenedor-efecto {
-    position: relative !important;
-    width: 95% !important;
-    max-width: 360px !important;
-    height: auto !important;
-    margin: 20px auto !important;
-    padding: 10px !important;
-  }
+  /* ... (aquí ya tienes el código anterior, déjalo como está) ... */
 
-  .texto-oculto {
-    position: relative !important; /* Cambia de absolute a relative para que no se salga de la pantalla */
-    top: 0 !important;
-    left: 0 !important;
-    transform: none !important;    /* Desactiva el centrado rígido de PC */
-    width: 100% !important;
-    text-align: center !important;
-    box-sizing: border-box !important;
-  }
-
-  /* Reduce el tamaño del texto blanco */
+  /* NUEVO: Esto va a separar los párrafos para que no se encimen */
   .texto-oculto p {
-    font-size: 13px !important;       /* Letra más pequeña para que quepa en el ancho del celular */
-    letter-spacing: -1.5px !important; /* Ajusta los bloques de letras */
-    line-height: 1.6 !important;      /* Da aire entre renglones */
-    margin-bottom: 25px !important;   /* Empuja el enlace morado hacia abajo */
-    white-space: normal !important;
-    word-wrap: break-word !important;
+    margin-bottom: 20px !important; /* Empuja el enlace hacia abajo */
   }
 
-  /* Ajusta el nombre "SR. Daniel Noboa" */
-  .texto-oculto span.letra-color {
-    font-size: 15px !important;       /* Tamaño ideal para el título en celular */
-    display: inline-block !important;
-    margin-bottom: 10px !important;
-  }
-
-  /* Corrige el enlace morado de abajo */
+  /* NUEVO: Esto reduce el tamaño de las letras moradas del enlace */
   .texto-oculto a {
-    display: block !important;        /* Lo convierte en un bloque independiente */
-    font-size: 12px !important;       /* Letra compacta para el enlace largo */
-    letter-spacing: -1px !important;
-    line-height: 1.4 !important;
-    margin-top: 15px !important;
-    white-space: normal !important;
-    word-wrap: break-word !important;
+    font-size: 16px !important;       /* Reduce el tamaño del enlace morado */
+    letter-spacing: -1px !important;  /* Junta un poco sus letras para que quepan */
+    line-height: 1.6 !important;      /* Separa los renglones del enlace */
+    display: inline-block !important; /* Lo organiza mejor en el bloque */
+    margin-top: 15px !important;      /* Crea una separación limpia con el texto de arriba */
   }
 }
