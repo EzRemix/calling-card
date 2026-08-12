@@ -40,7 +40,6 @@ body {
 
 @import url('https://fonts.cdnfonts.com/css/earwig-factory');
 
-/* 2. Configurar el contenedor para que ambos elementos se encimen */
 .contenedor-efecto {
   position: relative;
   width: 90;       /* El tamaño máximo que elegimos antes */
@@ -49,7 +48,6 @@ body {
   margin: 0 auto;     /* Centra el contenedor en la pantalla */
 }
 
-/* 4. Estilos y animación del texto (de transparente a visible) */
 .texto-oculto {
   position: absolute;
   top: 50%;
@@ -68,10 +66,6 @@ body {
   animation: aparecerTexto 3s forwards;
 }
 
-/* =========================================================
-   REGLAS DE LAS ANIMACIONES (Pasos del efecto)
-   ========================================================= */
-
 @keyframes desvanecerParcial {
   0% {
     opacity: 1; /* Inicia 100% clara y visible */
@@ -88,27 +82,4 @@ body {
   0% { opacity: 0; }     /* Empieza invisible */
   50% { opacity: 0; }    /* Sigue invisible mientras la imagen se borra */
   100% { opacity: 1; }   /* Se vuelve completamente visible al final */
-}
-
-.letra-color {
-    color: #ff0000;
-}
-
-/* Esto ajustará las letras recortadas para que entren bien en el celular */
-@media (max-width: 600px) {
-  /* ... (aquí ya tienes el código anterior, déjalo como está) ... */
-
-  /* NUEVO: Esto va a separar los párrafos para que no se encimen */
-  .texto-oculto p {
-    margin-bottom: 20px !important; /* Empuja el enlace hacia abajo */
-  }
-
-  /* NUEVO: Esto reduce el tamaño de las letras moradas del enlace */
-  .texto-oculto a {
-    font-size: 16px !important;       /* Reduce el tamaño del enlace morado */
-    letter-spacing: -1px !important;  /* Junta un poco sus letras para que quepan */
-    line-height: 1.6 !important;      /* Separa los renglones del enlace */
-    display: inline-block !important; /* Lo organiza mejor en el bloque */
-    margin-top: 15px !important;      /* Crea una separación limpia con el texto de arriba */
-  }
 }
