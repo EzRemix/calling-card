@@ -8,7 +8,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #000000;
+    background-color: #fe0000;
 }
 
 /* EFECTO DE SCANLINES */
@@ -86,5 +86,5 @@ body {
 }
 
 .texto-oculto span.letra-color {
-    color: #ff0000
+    color: #000000
   }
