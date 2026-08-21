@@ -62,8 +62,6 @@ body {
   font-family: 'Earwig Factory', sans-serif;                                           
   font-size: 1.5rem;
   color: #ffffff; /* Cambia el color a tu gusto */
-  
-  /* Aplicamos la animación del texto en sintonía con la imagen */
   animation: aparecerTexto 3s forwards;
 }
 
